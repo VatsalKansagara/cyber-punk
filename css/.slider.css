@@ -1,0 +1,46 @@
+.slider {
+ overflow: hidden;
+ width: 100vw;
+ height: 100vh;
+ position: relative;
+}
+ 
+.slider .slide {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+ animation: slider 12.5s infinite;
+}
+ 
+.slider .slide:nth-child(1) {
+    background-image: url('/solar/images/hero-1.jpg') no-repeat center center;
+    background-size: cover;
+   animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2) {
+    background-image: url('/solar/images/hero-2.jpg') no-repeat center center;
+    background-size: cover;
+   animation-delay: -2.5s;
+}
+
+
+
+@keyframes slider {
+ 0%, 16%, 100% {
+   transform: translateX(0);
+   animation-timing-function: ease;
+ }
+ 20% {
+   transform: translateX(-100%);
+   animation-timing-function: step-end;
+ }
+ 96% {
+   transform: translateX(100%);
+   animation-timing-function: ease;
+ }
+}
